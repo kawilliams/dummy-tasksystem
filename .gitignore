@@ -1,0 +1,4 @@
+venv/
+
+tasksystem/tasksystem/__pycache__/
+tasksystem/taskselection/__pycache__/
