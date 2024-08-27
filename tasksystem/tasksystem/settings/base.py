@@ -9,24 +9,15 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
+import secrets
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-l&%%g!y$x90ot5*h8@et24i73wfx@dksy7j$x($or77g7uf2v@"
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -70,15 +61,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "tasksystem.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
 }
 
 
@@ -100,6 +86,26 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# REST framework settings
+REST_FRAMEWORK = {
+  'DEFAULT_AUTHENTICATION_CLASSES': (
+    'rest_framework.authentication.TokenAuthentication',
+  ),
+  'DEFAULT_PERMISSION_CLASSES': (
+    'rest_framework.permissions.IsAuthenticated',
+  ),
+  # throttle settings
+  'DEFAULT_THROTTLE_CLASSES': (
+    'rest_framework.throttling.UserRateThrottle',
+  ),
+  'DEFAULT_THROTTLE_RATES': {
+    'user': '5/second',
+  }
+}
+
+# Websockets
+CHANNEL_LAYERS = {
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -111,7 +117,6 @@ TIME_ZONE = "EST"
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

@@ -16,8 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from tasksystem import views as ts_views
+from rest_framework.authtoken import views as auth_views
 
-urlpatterns = [
-    path("taskselection", include("taskselection.urls")),
+urlpatterns = [ 
     path("admin/", admin.site.urls),
+    path("taskselection", include("taskselection.urls")),
+    path("", ts_views.Root.as_view()),
+    path("api-token-auth/"), auth_views.obtain_auth_token
+   
 ]

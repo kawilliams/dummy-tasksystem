@@ -2,3 +2,7 @@ venv/
 
 tasksystem/tasksystem/__pycache__/
 tasksystem/taskselection/__pycache__/
+venv
+*.pyc
+staticfiles
+.env
