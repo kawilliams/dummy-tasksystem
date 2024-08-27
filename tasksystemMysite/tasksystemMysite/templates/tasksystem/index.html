@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load</title>
+</head>
+<body>
+        
+{% if latest_task_list %}
+    <ul>
+    {% for task in latest_task_list %}
+        <li>{{ task.code}} {{ task.task_text }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No tasks are available.</p>
+{% endif %}
+</body>
+</html>
