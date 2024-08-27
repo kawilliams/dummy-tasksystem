@@ -20,7 +20,7 @@ from tasksystemMysite import views as ts_views
 from rest_framework.authtoken import views as auth_views
 
 urlpatterns = [ 
-    path("tasksystemMysite", include("taskselectionPolls.urls")),
+    path("tasksystemMysite", include("taskselection.urls")),
     path("admin/", admin.site.urls),
     # path("taskselection", include("taskselection.urls")),
     # path("", ts_views.Root.as_view()),

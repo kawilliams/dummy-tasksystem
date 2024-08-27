@@ -7,8 +7,8 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from taskselectionPolls.models import Task
-from taskselectionPolls.serializers import TaskSerializer
+from taskselection.models import Task
+from taskselection.serializers import TaskSerializer
 from rest_framework.views import APIView
 #from channels import Group #Katy doesn't work
 
