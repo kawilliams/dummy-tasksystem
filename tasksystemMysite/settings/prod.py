@@ -1,5 +1,4 @@
 from tasksystemMysite.settings.base import *
-import dj_database_url
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -13,19 +12,19 @@ else:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'p#$hm-6n0^c6f6iuf0^iu0sla_()$)gt196m=cz&6_48_=68yq'
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'] = db_from_env
+
 # Code below was after we left Heroku
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'vissv_db',
-#         'USER': 'visweeksvchairs',
-#         'PASSWORD': 'SVs@visweek2023',
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'vissv_db',
+        'USER': 'visweeksvchairs',
+        'PASSWORD': 'SVs@visweek2023',
+        'ATOMIC_REQUESTS': True,
 #         'HOST': '127.0.0.1',
 #         'PORT': '3306'
-#     }
-# }
+    }
+}
 
 #ALLOWED_HOSTS = ['www2.visus.uni-stuttgart.de', 'zarzuela.visus.uni-stuttgart.de']
 ALLOWED_HOSTS = ['sv-task-system.herokuapp.com', 'tasksystem2.herokuapp.com']

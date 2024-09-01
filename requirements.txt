@@ -10,11 +10,11 @@ daphne==4.1.2 #updated 2024
 Django==4.2 #updated 2024
 django-cors-headers==4.0.0 #updated 2024
 djangorestframework==3.14.0 #updated 2024
-dj_database_url
 #gunicorn==19.7.1 #no longer needed? 2024
 hyperlink==21.0.0 #updated 2024
 incremental==24.7.2 #updated 2024
 msgpack==1.0.5 #updated 2024
+# For mysqlclient, need to `brew install mysql pkg-config` first, per the docs
 mysqlclient
 pytz==2024.1 #updated 2024
 redis #updated 2024
