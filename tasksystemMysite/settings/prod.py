@@ -21,8 +21,10 @@ DATABASES = {
         'USER': 'visweeksvchairs',
         'PASSWORD': 'SVs@visweek2023',
         'ATOMIC_REQUESTS': True,
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'HOST': 'localhost',
+        'PORT': '6379',
+        #'HOST': '127.0.0.1',
+        #'PORT': '3306',
     }
 }
 
@@ -45,6 +47,6 @@ CHANNEL_LAYERS['default'] = {
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ORIGIN_WHITELIST = ('vissv.org', 'www2.visus.uni-stuttgart.de', 'zarzuela.visus.uni-stuttgart.de','54.201.77.132',  'localhost')
+CORS_ORIGIN_WHITELIST = ('vissv.org', 'www2.visus.uni-stuttgart.de', 'zarzuela.visus.uni-stuttgart.de','54.201.77.132', 'localhost')
 CORS_REPLACE_HTTPS_REFERER = True
 CORS_ALLOW_CREDENTIALS = True
