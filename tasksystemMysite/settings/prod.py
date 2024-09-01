@@ -17,13 +17,12 @@ SECRET_KEY = 'p#$hm-6n0^c6f6iuf0^iu0sla_()$)gt196m=cz&6_48_=68yq'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        #'NAME': 'vissv_db',
-        "NAME": BASE_DIR / "db.sqlite3",
+        'NAME': 'vissv_db',
         'USER': 'visweeksvchairs',
         'PASSWORD': 'SVs@visweek2023',
         'ATOMIC_REQUESTS': True,
-#         'HOST': '127.0.0.1',
-#         'PORT': '3306'
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
