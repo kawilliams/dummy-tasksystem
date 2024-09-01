@@ -6,11 +6,11 @@
     <title>Load</title>
 </head>
 <body>
-        
+ <h2>Task selection index page</h2>       
 {% if latest_task_list %}
     <ul>
     {% for task in latest_task_list %}
-        <li>{{ task.code}} {{ task.task_text }}</li>
+        <li>{{ task.code}} | {{ task.category}} | {{ task.desc }} | {{ task.date }} {{ task.starttime }} {{ task.endtime }} | {{ task.location }} | {{ task.sv }} |</task></li>
     {% endfor %}
     </ul>
 {% else %}

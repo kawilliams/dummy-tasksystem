@@ -14,10 +14,10 @@ from rest_framework.views import APIView
 
 
 def index(request):
-    #latest_task_list = Task.objects.order_by("code")[:20]
-    #context = {"latest_task_list" : latest_task_list}
-    #return render(request, "tasksystem/index.html", context)
-    return HttpResponse("Hello, world. You're at the Katy index.")
+    latest_task_list = Task.objects.order_by("code")[:20]
+    context = {"latest_task_list" : latest_task_list}
+    return render(request, "taskselection/index.html", context) #
+    #return HttpResponse(latest_task_list)
 
 # def availableTaskList(request, APIView):
 #     tasks = Task.objects.filter(sv=None)
