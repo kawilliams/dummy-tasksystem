@@ -27,7 +27,7 @@ DATABASES = {
 }
 
 #ALLOWED_HOSTS = ['www2.visus.uni-stuttgart.de', 'zarzuela.visus.uni-stuttgart.de']
-ALLOWED_HOSTS = ['sv-task-system.herokuapp.com', 'tasksystem2.herokuapp.com']
+ALLOWED_HOSTS = [ 'sv-task-system.herokuapp.com', 'tasksystem2.herokuapp.com']
 
 # websockets --OLD
 # CHANNEL_LAYERS['default'] = {
