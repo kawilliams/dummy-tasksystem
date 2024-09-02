@@ -20,16 +20,13 @@ DATABASES = {
         'NAME': 'vissv_db',
         'USER': 'visweeksvchairs',
         'PASSWORD': 'SVs@visweek2023',
-        'ATOMIC_REQUESTS': True,
-        'HOST': 'localhost',
-        'PORT': '6379',
-        #'HOST': '127.0.0.1',
-        #'PORT': '3306',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
 #ALLOWED_HOSTS = ['www2.visus.uni-stuttgart.de', 'zarzuela.visus.uni-stuttgart.de']
-ALLOWED_HOSTS = [ 'sv-task-system.herokuapp.com', 'tasksystem2.herokuapp.com']
+ALLOWED_HOSTS = ['*']#['sv-task-system.herokuapp.com', 'tasksystem2.herokuapp.com',  '127.0.0.1']
 
 # websockets --OLD
 # CHANNEL_LAYERS['default'] = {
@@ -40,7 +37,7 @@ ALLOWED_HOSTS = [ 'sv-task-system.herokuapp.com', 'tasksystem2.herokuapp.com']
 CHANNEL_LAYERS['default'] = {
     "BACKEND": "asgi_redis.RedisChannelLayer",
     "CONFIG": {
-        "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:6379')],
+        "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:3306')],
     },
     "ROUTING": "taskselection.routing.channel_routing",
 }
